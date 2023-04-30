@@ -4,7 +4,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 # Read original csv file
-df = pd.read_csv (r'healthcare-dataset-stroke-data.csv', header =0)
+df = pd.read_csv (r'Preprocessing\healthcare-dataset-stroke-data.csv', header =0)
 
 # Delete "id" column
 data1 = df.drop(columns=['id'], inplace=True)
@@ -44,14 +44,14 @@ for split in data_splits:
 
 # Export to CSV and Excel files
 train_data = pd.concat([X_train, y_train], axis=1)
-train_data.to_excel (r'DataTrain.xlsx', index = None, header=True)
-train_data.to_csv (r'DataTrain.csv', index = None, header=True) 
+train_data.to_excel (r'Preprocessing\DataTrain.xlsx', index = None, header=True)
+train_data.to_csv (r'Preprocessing\DataTrain.csv', index = None, header=True) 
 
 test_data = pd.concat([X_test, y_test], axis=1)
-test_data.to_excel (r'DataTest.xlsx', index = None, header=True)
-test_data.to_csv (r'DataTest.csv', index = None, header=True) 
+test_data.to_excel (r'Preprocessing\DataTest.xlsx', index = None, header=True)
+test_data.to_csv (r'Preprocessing\DataTest.csv', index = None, header=True) 
 
-df.to_excel (r'DataFrame.xlsx', index = None, header=True)
+df.to_excel (r'Preprocessing\DataFrame.xlsx', index = None, header=True)
 
 print(" -------- EXPORT COMPLETE -------- ")
 

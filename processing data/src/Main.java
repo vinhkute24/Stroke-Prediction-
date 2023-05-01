@@ -84,7 +84,7 @@ public class Main {
         //danh gia
         eval = new Evaluation(test);
         eval.evaluateModel(log, test);
-        System.out.println(eval.toSummaryString("\nResults_nb\n\n", false));
+        System.out.println(eval.toSummaryString("\nResults_logistic\n\n", false));
         System.out.println(eval.toClassDetailsString());
         System.out.println(eval.toMatrixString());
 
